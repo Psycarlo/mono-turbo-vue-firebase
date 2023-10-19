@@ -1,4 +1,5 @@
 {
   "extends": "tsconfig/vue-vite.json",
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["dist", "node_modules"]
 }
