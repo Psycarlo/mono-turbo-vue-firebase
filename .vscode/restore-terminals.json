@@ -1,0 +1,54 @@
+{
+  "artificialDelayMilliseconds": 700,
+  "keepExistingTerminalsOpen": false,
+  "runOnStartup": true,
+  "terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "Root"
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "Web",
+          "commands": ["cd apps/web"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "Functions",
+          "commands": ["cd apps/functions"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "Docs",
+          "commands": ["cd apps/docs"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "Shared",
+          "commands": ["cd packages/shared"]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "UI",
+          "commands": ["cd packages/ui"]
+        }
+      ]
+    }
+  ]
+}

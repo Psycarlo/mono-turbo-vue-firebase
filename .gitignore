@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+
+# Build files
+dist
+
+# Turbo
+.turbo
+
+# Firebase
+.firebase
+firebase-debug.log
+firebase-debug.*.log
+firestore-debug.log
+ui-debug.log
+
+# Env
+*.local
+
+# Misc
+.DS_Store

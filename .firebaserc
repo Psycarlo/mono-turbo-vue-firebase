@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "mono-turbo-vue-firebase"
+  },
+  "targets": {}
+}

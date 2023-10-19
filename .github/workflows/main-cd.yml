@@ -1,0 +1,6 @@
+name: Mono Turbo Vue Firebase CD
+
+on:
+  push:
+    branches:
+      - main

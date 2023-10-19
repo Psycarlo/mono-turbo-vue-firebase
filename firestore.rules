@@ -1,0 +1,46 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function documentFieldsCheckOut(requiredFields, optionalFields) {
+      let allFields = requiredFields.concat(optionalFields);
+      return request.resource.data.keys().hasAll(requiredFields) 
+        && request.resource.data.keys().hasOnly(allFields);
+    }
+
+    function isString(field) {
+      return field is string;
+    }
+
+    function isTimestamp(field) {
+      return field is timestamp;
+    }
+
+    function validateStringSize(field, min, max) {
+      let stringLength = field.size();
+
+      return stringLength >= min && stringLength <= max;
+    }
+
+    function validateTimeIsNow(field) {
+      let millisNowWindow = 30 * 1000; // 30 seconds
+
+      let serverMillis = request.time.toMillis();
+      let fieldMillis = field.toMillis();
+
+      return fieldMillis <= serverMillis + millisNowWindow 
+        && fieldMillis >= serverMillis - millisNowWindow;
+    }
+
+    match /words/{wordId} {
+      function validateCreateWordDocument() {
+        return documentFieldsCheckOut(['word', 'createdAt'], [])
+          && isString(request.resource.data.word)
+          && validateStringSize(request.resource.data.word, 4, 16)
+          && isTimestamp(request.resource.data.createdAt)
+          && validateTimeIsNow(request.resource.data.createdAt);
+      }
+
+      allow create: if validateCreateArticleDocument();
+    }
+  }
+}

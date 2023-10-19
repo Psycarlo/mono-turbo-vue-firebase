@@ -1,0 +1,32 @@
+{
+  "name": "mono-turbo-vue-firebase",
+  "version": "0.0.0",
+  "author": {
+    "name": "Psycarlo",
+    "email": "psycarlo1@gmail.com"
+  },
+  "description": "An example for a monorepo with turborepo, vuejs and firebase that deploys using Github Actions",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "format": "prettier --check \"**/*.{js,ts,vue,md}\"",
+    "format:fix": "prettier --write \"**/*.{js,ts,vue,md}\"",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "emulators": "firebase emulators:exec --project demo-words \"turbo run emulators\"",
+    "dev": "turbo run dev"
+  },
+  "devDependencies": {
+    "firebase-tools": "^12.7.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6"
+  },
+  "keywords": [
+    "Monorepo",
+    "Turborepo",
+    "Vue",
+    "Firebase",
+    "Github Actions"
+  ],
+  "packageManager": "pnpm@8.6.10"
+}

@@ -1,0 +1,8 @@
+// RULES ARE THE SAME ACROSS ALL PSYBITCOIN FIREBASE PROJECTS
+
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    allow read, create, update, delete: if false;
+  }
+}

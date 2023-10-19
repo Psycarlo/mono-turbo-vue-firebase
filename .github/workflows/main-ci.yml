@@ -1,0 +1,4 @@
+name: Mono Turbo Vue Firebase CI
+
+on:
+  pull_request:
