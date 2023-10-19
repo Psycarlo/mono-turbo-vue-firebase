@@ -18,7 +18,7 @@
 - [ ] Test, Build and Deploy using Github Actions
 - [ ] Coverage and test results
 - [ ] Multiple environments: emulators, development, staging, production
-- [ ] Commintlint
+- [x] Commintlint
 - [ ] Firebase rules
 - [ ] Stories
 - [ ] Documentation app
