@@ -18,7 +18,10 @@
     "build": "turbo run build"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0",
     "firebase-tools": "^12.7.0",
+    "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6"
   },
