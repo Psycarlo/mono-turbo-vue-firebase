@@ -10,8 +10,9 @@
     ]
   },
   "functions": {
-    "predeploy": ["pnpm --cwd \"$RESOURCE_DIR\" build"],
-    "source": "apps/functions"
+    "source": "apps/functions",
+    "predeploy": ["turbo build", "pnpm --dir \"$RESOURCE_DIR\" isolate"],
+    "runtime": "nodejs18"
   },
   "firestore": {
     "rules": "firestore.rules",

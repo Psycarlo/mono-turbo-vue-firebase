@@ -2,11 +2,30 @@
   "name": "shared",
   "version": "0.0.0",
   "private": true,
-  "main": "src/index.ts",
-  "scripts": {},
+  "main": "dist/index.umd.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
   "devDependencies": {
+    "@types/node": "^20.8.6",
     "eslint-config-custom": "workspace:*",
     "firebase": "^10.5.0",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.0"
   }
 }

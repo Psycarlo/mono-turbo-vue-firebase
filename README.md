@@ -9,7 +9,7 @@
 - [x] Shared TailwindCSS Config
 - [x] Shared Vue UI Library
 - [x] Web with Vue and TailwindCSS
-- [ ] Local development with Emulators
+- [x] Local development with Emulators
 - [ ] Local development with firebase project connection
 - [ ] Seed data for emulators in `seeds/`
 - [ ] Unit tests
@@ -19,7 +19,7 @@
 - [ ] Coverage and test results
 - [ ] Multiple environments: emulators, development, staging, production
 - [x] Commintlint
-- [ ] Firebase rules
+- [x] Firebase rules
 - [ ] Stories
 - [ ] Documentation app
 - [ ] Firebase AppCheck
