@@ -13,6 +13,11 @@
       "cache": false,
       "persistent": true
     },
+    "web#emulators": {
+      "dependsOn": ["^build", "functions#build"],
+      "cache": false,
+      "persistent": true
+    },
     "dev": {
       "dependsOn": ["^build"],
       "cache": false,
