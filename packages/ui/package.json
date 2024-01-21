@@ -21,6 +21,7 @@
     "./dist"
   ],
   "scripts": {
+    "dev": "vite build --watch",
     "lint": "eslint . --ext ts,vue --max-warnings 0",
     "lint:fix": "eslint . --ext ts,vue --max-warnings 0 --fix",
     "build": "vite build"
