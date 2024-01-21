@@ -26,6 +26,7 @@
 - [ ] Firebase Recaptcha
 - [ ] Changesets (https://github.com/vercel/turbo/tree/main/examples/with-changesets)
 - [ ] Recommended Extensions
+- [ ] Medium article
 
 ## Getting Started
 
